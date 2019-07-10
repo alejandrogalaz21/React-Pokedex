@@ -1,11 +1,14 @@
 import React from 'react'
 import Pokedex from './components/Pokedex/Pokedex'
 import Pokemon from './components/Pokemon/Pokemon'
+import Home from './components/Pages/Home'
+
 import {
   BrowserRouter as Router,
   Route,
   Switch,
 } from "react-router-dom"
+
 
 function App() {
   const defaultProps = {
@@ -27,13 +30,16 @@ function App() {
           <Route
             path="/"
             exact
-            render={props => <Pokedex {...props} pokemons={defaultProps.pokemon} />}
+            render={props => <Home {...props} pokemons={defaultProps.pokemon} />}
           />
           <Route
             path="/pokemon/:id"
             exact
             render={props => <Pokemon {...props} pokemons={defaultProps.pokemon} />}
           />
+
+
+
         </Switch>
       </Router>
     </div>
