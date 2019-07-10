@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactJson from 'react-json-view'
+import Pokedex from './components/Pokedex/Pokedex'
 
 function App() {
   const defaultProps = {
@@ -16,7 +16,7 @@ function App() {
   }
   return (
     <div className="App">
-      <ReactJson src={defaultProps} theme="solarized" />
+      <Pokedex pokemons={defaultProps.pokemon} />
     </div>
   )
 }
